@@ -165,7 +165,7 @@ const UI = {
       if (!neededData) return;
       this.populateData(neededData);
     });
-    document.addEventListener("DOMContentLoaded", async () => {
+    window.addEventListener("DOMContentLoaded", async () => {
       const { country, city } = this.getDataFromLocalStorage();
       this.sendInputsData(weatherData, country, city);
       const foundData = await weatherData.getWeather();
